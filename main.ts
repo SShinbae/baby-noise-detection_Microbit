@@ -12,7 +12,7 @@ if (esp8266.isESP8266Initialized()) {
 } else {
     basic.showIcon(IconNames.No)
 }
-esp8266.connectWiFi("YNWA\"s", "liverpool9568")
+esp8266.connectWiFi("YNWA", "liverpool")
 if (esp8266.isWifiConnected()) {
     basic.showIcon(IconNames.Yes)
 } else {
@@ -21,7 +21,7 @@ if (esp8266.isWifiConnected()) {
 basic.forever(function () {
     esp8266.uploadThingspeak(
     "",
-    0
+    input.soundLevel()
     )
     if (esp8266.isThingspeakUploaded()) {
         basic.showIcon(IconNames.Yes)
