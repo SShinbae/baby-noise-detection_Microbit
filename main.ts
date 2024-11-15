@@ -20,7 +20,7 @@ if (esp8266.isWifiConnected()) {
 }
 basic.forever(function () {
     esp8266.uploadThingspeak(
-    "",
+    "O26FYGGP9PB0VLX5",
     input.soundLevel()
     )
     if (esp8266.isThingspeakUploaded()) {
